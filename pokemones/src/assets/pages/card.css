@@ -1,5 +1,11 @@
-.card{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.card2{
+display: flex;
+padding-top: 50px;
+
+max-width: 540px;
+justify-content: center !important;
+align-items: center;
+}
+.image{
+    padding-top: 100px;
 }
