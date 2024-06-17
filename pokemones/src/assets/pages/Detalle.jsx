@@ -60,7 +60,7 @@ const Detalle = () => {
 
                                         
                                     </div>
-                                    <div className='p-5'>
+                                    <div className='p-5 m-4'>
                                         {pokemon.stats && pokemon.stats.map((stat) => (
                                             <div className='d-flex' key={stat.stat.name}>
                                                 <label className='font-bold'>'{stat.stat.name} : </label>
