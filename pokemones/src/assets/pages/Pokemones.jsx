@@ -24,14 +24,14 @@ function Pokemones() {
     }, [])
     return (
         <>
-            <select value={name} onChange={(e) => setName(e.target.value)}>
+            <select className='m-3' value={name} onChange={(e) => setName(e.target.value)}>
                 <option value="" disabled defaultValue>Selecciona tu Pokemon</option>
                 {
                 pokemones.map(({ name }) => <option key={name} value={name}>{name}</option>)
                 }
 
             </select>
-            <button onClick={() => navigate(`/pokemones/${name}`)}>Ver Pokemon</button>
+            <button className='m-3' onClick={() => navigate(`/pokemones/${name}`)}>Ver Pokemon</button>
         </>
     )
 }

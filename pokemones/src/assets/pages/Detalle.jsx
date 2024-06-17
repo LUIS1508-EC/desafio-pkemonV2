@@ -33,15 +33,15 @@ const Detalle = () => {
         <>
             <div>
                 <h1 className='text-3xl font-bold uppercase text-center mt-5'>{pokemon.name}</h1>
-                <div className='flex justify-center items-center'>
-                    <h3 className='text-center text-xl mt-2 font-bold'>
+                <div className='d-flex justify-content-center'>
+                    <h3 className="text-align-center text-xl mt-2 uppercase">
                         {""}
                         Tipo(s) :{""}
                     </h3>
                     {pokemon.types ? (
                         pokemon.types.map((type, index) => (
                             <h3
-                                className="text-center text-xl mt-2 uppercase"
+                                className="text-align-center text-xl mt-2 uppercase"
                                 key={index}
                             >
                                 {index > 0 ? " , " : ""}
@@ -49,17 +49,17 @@ const Detalle = () => {
                             </h3>
                         ))
                     ) : (
-                        <h3 className="text-center text-xl mt-2 ">Desconocido</h3>
+                        <h3 className="text-align-center">Desconocido</h3>
                     )}
                 </div>
-                <div>
+                <div className='d-flex justify-content-center'>
                     {pokemon.sprites ? (
                         <img src={pokemon.sprites?.front_default} alt="Imagen Pokemon" width={300} />
                         ) : null}
                 </div>
-                <div className='flex flex-col items-start content-center'>
+                <div className='d-flex flex-column align-items-center justify-content-center'>
                     {pokemon.stats && pokemon.stats.map((stat) => (
-                        <div className='flex justify-center' key={stat.stat.name}>
+                        <div className='d-flex justify-cocenter' key={stat.stat.name}>
                             <label className='font-bold'>'{stat.stat.name} : </label>
                             <p>{stat.base_stat}</p>
                         </div>
