@@ -10,6 +10,7 @@
     align-items: center;
 }
 
+<<<<<<< HEAD
 .selector{
     display: flex;
     flex-direction: column;
@@ -30,3 +31,5 @@ font-weight: bold;
 font-weight: bold;
 color: brown;
 }
+=======
+>>>>>>> 0bf054e67603d233d3cb901dda6fbb29f157f342

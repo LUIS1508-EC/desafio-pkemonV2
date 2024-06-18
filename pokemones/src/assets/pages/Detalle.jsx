@@ -28,6 +28,7 @@ const Detalle = () => {
     }, [name])
 
     return (
+<<<<<<< HEAD
         <div>
             {pokemon ? (
                 <>
@@ -76,6 +77,59 @@ const Detalle = () => {
             ) : null}
 
         </div>
+=======
+
+        <div className='p-4 d-flex justify-content-center'>
+            {pokemon ? (
+                <>
+                    <card className="card mb3 card2">
+                        <div className='row'>
+                            <div className='col-md-4 image'>
+                                {pokemon.sprites ? (
+                                    <img src={pokemon.sprites?.front_default} alt="Imagen Pokemon" width={300} />
+                                ) : null}
+                            </div>
+                            <div className="col-md-8">
+                                <div className="card-body">
+                                    <h1 className='card-title'>{pokemon.name}</h1>
+                                    <div>
+                                        <h5>
+                                            Tipo : {pokemon.types ? (
+                                            pokemon.types.map((type, index) => (
+                                                <p
+                                                    key={index}
+                                                >
+                                                    {index > 0 ? " , " : ""}
+                                                    {type.type.name}
+                                                </p>
+                                            ))
+                                        ) : (
+                                            <h3>Desconocido</h3>
+                                        )}
+                                        </h5>
+
+                                        
+                                    </div>
+                                    <div className='p-5 m-4'>
+                                        {pokemon.stats && pokemon.stats.map((stat) => (
+                                            <div className='d-flex' key={stat.stat.name}>
+                                                <label className='font-bold'>'{stat.stat.name} : </label>
+                                                <p>{stat.base_stat}</p>
+                                            </div>
+                                        ))}
+                                    </div>
+                                                                      
+
+                                </div>
+                            </div >
+                        </div>
+                    </card>
+                </>
+            ) : null}
+
+        </div>
+
+>>>>>>> 0bf054e67603d233d3cb901dda6fbb29f157f342
     )
 
 }
