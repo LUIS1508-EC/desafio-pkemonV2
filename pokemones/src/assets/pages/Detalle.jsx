@@ -30,47 +30,53 @@ const Detalle = () => {
     return (
         <div>
             {pokemon ? (
-        <>
-            <div>
-                <h1 className='text-3xl font-bold uppercase text-center mt-5'>{pokemon.name}</h1>
-                <div className='d-flex justify-content-center'>
-                    <h3 className="text-align-center text-xl mt-2 uppercase">
-                        {""}
-                        Tipo(s) :{""}
-                    </h3>
-                    {pokemon.types ? (
-                        pokemon.types.map((type, index) => (
-                            <h3
-                                className="text-align-center text-xl mt-2 uppercase"
-                                key={index}
-                            >
-                                {index > 0 ? " , " : ""}
-                                {type.type.name}
+                <>
+                    <div className='card'>
+                        <h1 className='text-transform-capitalize d-flex justify-content-center card-title'>{pokemon.name}</h1>
+                        <div className='d-flex justify-content-center'>
+                            <h3 className="text-align-center text-xl mt-2 uppercase">
+                                {""}
+                                Tipo(s) :{""}
                             </h3>
-                        ))
-                    ) : (
-                        <h3 className="text-align-center">Desconocido</h3>
-                    )}
-                </div>
-                <div className='d-flex justify-content-center'>
-                    {pokemon.sprites ? (
-                        <img src={pokemon.sprites?.front_default} alt="Imagen Pokemon" width={300} />
-                        ) : null}
-                </div>
-                <div className='d-flex flex-column align-items-center justify-content-center'>
-                    {pokemon.stats && pokemon.stats.map((stat) => (
-                        <div className='d-flex justify-cocenter' key={stat.stat.name}>
-                            <label className='font-bold'>'{stat.stat.name} : </label>
-                            <p>{stat.base_stat}</p>
-                        </div>
-                    ))}
-                </div>
-            </div >
-        </>
-    ) : null}
+                            {pokemon.types ? (
+                                pokemon.types.map((type, index) => (
+                                    <h3
+                                        className="text-align-center mt-2 uppercase"
+                                        key={index}
+                                    >
+                                        {index > 0 ? " , " : ""}
+                                        {type.type.name}
+                                    </h3>
+                                ))
+                            ) : (
+                                <h3 className="text-align-center">Desconocido</h3>
+                            )}
+                        </div>  
+                        <card className="d-flex justify-content-center card2 mb-3">
+                            <div className='row no-gutters'>
+                                <div className='col-md-4 align-self-center'>
+                                    {pokemon.sprites ? (
+                                        <img src={pokemon.sprites?.front_default} className='card-img size' alt="Imagen Pokemon" />
+                                    ) : null}
+                                </div>
+                                <div className='col-md-8'>
+                                    <div className='card-body state'>
+                                        {pokemon.stats && pokemon.stats.map((stat) => (
+                                            <div className='d-flex' key={stat.stat.name}>
+                                                <label className='font'>{stat.stat.name} : </label>
+                                                <p className='font2'>{stat.base_stat}</p>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                        </card>
+                    </div >
+                </>
+            ) : null}
 
-    </div>
-)
+        </div>
+    )
 
 }
 export default Detalle

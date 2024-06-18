@@ -3,3 +3,30 @@
     color: red;
 }
 
+.home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.selector{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.state{
+   padding: auto;
+   margin: auto;
+}
+.font{
+font-weight: bold;
+
+}
+
+.font2{
+font-weight: bold;
+color: brown;
+}

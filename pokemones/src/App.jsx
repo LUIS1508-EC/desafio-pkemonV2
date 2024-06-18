@@ -4,6 +4,7 @@ import './App.css'
 import Navbar from './components/Navbar'
 import Pokemones from './assets/pages/Pokemones'
 import Detalle from './assets/pages/Detalle'
+import Home from './assets/pages/Home1'
 
 function App() {
  
@@ -12,7 +13,7 @@ function App() {
     <>
       <Navbar />
       <Routes>
-        <Route path='/' element={<h1>HOME</h1>}/>
+        <Route path='/' element={<Home />}/>
         <Route path='/pokemones' element={<Pokemones />} />
         <Route path='/pokemones/:name' element={<Detalle />}/>
 

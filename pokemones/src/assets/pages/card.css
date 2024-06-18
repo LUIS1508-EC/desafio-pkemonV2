@@ -3,3 +3,23 @@
     justify-content: center;
     align-items: center;
 }
+
+.card2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: black 1px solid;
+    width: 540px;
+    background-color:aliceblue;
+}
+.size{
+    width: 300px;
+    margin-right: 260px;
+}
+
+.state{
+padding-left: 150px;
+}
+.font3{
+    text-transform: capitalize;
+}
